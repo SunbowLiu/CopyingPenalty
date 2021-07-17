@@ -50,7 +50,7 @@ do
 RESULT=$PATH_TO_OUTPUT/validation/$cp.txt
 python generate.py \
     $PATH_TO_DATA \
-    --gen-subset validation \
+    --gen-subset valid \
     --path $PATH_TO_OUTPUT/checkpoint_best.pt \
     --copypen $cp --target-dictionary-path $PATH_TO_TGT_DICTIONARY \
     > $RESULT
