@@ -38,7 +38,7 @@ Please refer to [fairseq](https://github.com/pytorch/fairseq/tree/master/example
 | parameter | description |
 |---        |---          |
 | --copypen | Copying penalty: <1.0 favors copying source tokens, >1.0 favors translating (converting) source tokens; Default: 1.0 |
-| --target-dictionary-path | Path to target side dictionary for automatically obtaining the punctuation list. |
+| --target-dictionary-path | Path to target side dictionary (produced by `preprocess.py`) for automatically obtaining the punctuation list. |
 
 Mainly modified code: `fairseq/sequence_generator.py`
 
@@ -52,7 +52,7 @@ python generate.py \
     $PATH_TO_DATA \
     --gen-subset valid \
     --path $PATH_TO_OUTPUT/checkpoint_best.pt \
-    --copypen $cp --target-dictionary-path $PATH_TO_TGT_DICTIONARY \
+    --copypen $cp --target-dictionary-path $PATH_TO_DATA/dict.tgt.txt \
     > $RESULT
 done
 ```
@@ -63,7 +63,7 @@ python generate.py \
     $PATH_TO_DATA \
     --gen-subset test \
     --path $PATH_TO_OUTPUT/checkpoint_best.pt \
-    --copypen $cp --target-dictionary-path $PATH_TO_TGT_DICTIONARY
+    --copypen $cp --target-dictionary-path $PATH_TO_DATA/dict.tgt.txt \
 ```
 
 
