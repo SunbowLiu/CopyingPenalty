@@ -63,7 +63,7 @@ python generate.py \
     $PATH_TO_DATA \
     --gen-subset test \
     --path $PATH_TO_OUTPUT/checkpoint_best.pt \
-    --copypen $cp --target-dictionary-path $PATH_TO_DATA/dict.tgt.txt \
+    --copypen $cp --target-dictionary-path $PATH_TO_DATA/dict.tgt.txt
 ```
 
 
